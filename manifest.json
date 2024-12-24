@@ -1,0 +1,10 @@
+{
+  "version": "1.0.0",
+  "manifest_version": 3,
+  "name": "Ripple Multisig Wallet",
+  "description": "Ripple Multisig Wallet Chrome Extension",
+  "action": {
+    "default_popup": "js/index.html",
+    "default_title": "Ripple Multisig Wallet"
+  }
+}
