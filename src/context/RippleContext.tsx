@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, useEffect } from 'react'
+import { createContext, useContext, useState, useEffect, ReactNode, FC } from 'react'
 import { Client } from 'xrpl'
 
 interface RippleContextType {
@@ -11,7 +11,7 @@ interface RippleContextType {
 
 const RippleContext = createContext<RippleContextType | undefined>(undefined)
 
-export const RippleProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+export const RippleProvider: FC<{ children: ReactNode }> = ({ children }) => {
   const [url, setUrl] = useState('wss://s.altnet.rippletest.net:51233')
   const [client, setClient] = useState<Client | null>(null)
 
