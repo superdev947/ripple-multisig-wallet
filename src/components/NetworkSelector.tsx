@@ -1,8 +1,8 @@
+import { ChangeEvent, FC, useEffect, useState } from 'react'
 import { useRippleContext } from '@/context/RippleContext'
-import React, { useEffect, useState } from 'react'
 
-const NetworkSelector: React.FC = () => {
-  const { client, setUrl, connect } = useRippleContext()
+const NetworkSelector: FC = () => {
+  const { setUrl, connect } = useRippleContext()
   const [selectedNetwork, setSelectedNetwork] = useState('testnet')
 
   const networks = [
@@ -23,7 +23,7 @@ const NetworkSelector: React.FC = () => {
     }
   ]
 
-  const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+  const handleChange = (event: ChangeEvent<HTMLSelectElement>) => {
     const selectedNetworkValue = event.target.value
     setSelectedNetwork(selectedNetworkValue)
 
@@ -39,11 +39,11 @@ const NetworkSelector: React.FC = () => {
 
   return (
     <div className='flex items-center space-x-2 mt-2'>
-      <span
+      {/* <span
         className={`inline-flex items-center p-2 text-sm font-medium text-white rounded-full ${
           client?.isConnected() ? 'bg-green-500' : 'bg-red-500'
         }`}
-      />
+      /> */}
       <select
         id='network'
         value={selectedNetwork}

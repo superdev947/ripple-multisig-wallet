@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { FC, useState } from 'react'
 import Issue from '@/components/Issue'
 import SignerListSet from '@/components/SignerListSet'
 import Prepare from '@/components/Prepare'
@@ -14,7 +14,7 @@ const tabs = [
   { id: 4, label: 'Submit', content: <Submit /> }
 ]
 
-const MultisigWallet: React.FC = () => {
+const MultisigWallet: FC = () => {
   const [activeTab, setActiveTab] = useState(0)
 
   return (
